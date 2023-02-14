@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<ul>
+    {% for pet in pets %}
+    <li><a href="/{{ pets.id }}">{{ pets.name }} {{ pets.photo_url }} {{ pets.available }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="pet_add_form.html">Add Pet</a>
+{% endblock %}
